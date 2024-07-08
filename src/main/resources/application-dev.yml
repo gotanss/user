@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Users
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userdb
+    password: 123
+    username: juanchire
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 8081
+app:
+  cuenta-api:
+    base-url: http://localhost:8080

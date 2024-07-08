@@ -12,6 +12,7 @@ import com.demo.user.util.ClienteMapper;
 import com.demo.user.util.ClienteRequestDTO;
 import com.demo.user.util.ClienteResponseDTO;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
 @Service
@@ -22,6 +23,7 @@ public class ClienteService {
 
    private CuentaApiService cuentaApiService;
 
+   @Transactional
    public ClienteResponseDTO crearCliente(ClienteRequestDTO request) {
 
       if (clienteRepository.existsClienteByTelefono(request.getTelefono())) {
